@@ -1,13 +1,13 @@
 # mermaid-test
 Trying some mermaid(.js) art
 
-*star*
+*star=italic*
 
-**stars**
+**stars=bold**
 
-_uline_
+_uline=italic_
 
-__uline__
+__ulines=bold__
 
 ## #1
 ```mermaid
@@ -46,4 +46,44 @@ Active task               :active,  des2, 2014-01-09, 3d
 Future task               :         des3, after des2, 5d                          
 Future task2               :         des4, after des3, 5d 
 ````
+
+## #4
+```mermaid
+classDiagram                                                                      
+Class01 <|-- AveryLongClass : Cool                                                
+Class03 *-- Class04                                                               
+Class05 o-- Class06                                                               
+Class07 .. Class08                                                                
+Class09 --> C2 : Where am i?                                                      
+Class09 --* C3                                                                    
+Class09 --|> Class07                                                              
+Class07 : equals()                                                                
+Class07 : Object[] elementData                                                    
+Class01 : size()                                                                  
+Class01 : int chimp                                                               
+Class01 : int gorilla                                                             
+Class08 <--> C2: Cool label
+````
+
+## #5
+```mermaid
+gitGraph                                                                          
+       commit                                                                     
+       commit                                                                     
+       branch develop                                                             
+       commit                                                                     
+       commit                                                                     
+       commit                                                                     
+       checkout main                                                              
+       commit                                                                     
+       commit      
+ ```
+ 
+ ## #6
+ ```mermaid
+ erDiagram                                                                         
+    CUSTOMER ||--o{ ORDER : places                                                
+    ORDER ||--|{ LINE-ITEM : contains                                             
+    CUSTOMER }|..|{ DELIVERY-ADDRESS : uses 
+ ````
 
