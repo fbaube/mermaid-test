@@ -47,7 +47,7 @@ Future task               :         des3, after des2, 5d
 Future task2               :         des4, after des3, 5d 
 ````
 
-## #4
+## #4A
 ```mermaid
 classDiagram                                                                      
 Class01 <|-- AveryLongClass : Cool                                                
@@ -65,9 +65,8 @@ Class01 : int gorilla
 Class08 <--> C2: Cool label
 ````
 
-## #4A
+## #4B
 ```mermaid
-classDiagram  
 classDiagram
     Animal <|-- Duck
     Animal <|-- Fish
@@ -91,7 +90,7 @@ classDiagram
     }
 ```
  
-## #5
+## #5A
  ```mermaid
  erDiagram                                                                         
     CUSTOMER ||--o{ ORDER : places                                                
@@ -99,7 +98,7 @@ classDiagram
     CUSTOMER }|..|{ DELIVERY-ADDRESS : uses 
  ```
 
-## #5A
+## #5B
 ```mermaid
 erDiagram
           CUSTOMER }|..|{ DELIVERY-ADDRESS : has
@@ -125,7 +124,7 @@ stateDiagram-v2
  Terminated --> [*]
  ```
  
- ## #7
+ ## #7 (fails!)
  ```mermaid
  gitGraph:
 options
