@@ -66,20 +66,6 @@ Class08 <--> C2: Cool label
 ````
 
 ## #5
-```mermaid
-gitGraph                                                                          
-       commit                                                                     
-       commit                                                                     
-       branch develop                                                             
-       commit                                                                     
-       commit                                                                     
-       commit                                                                     
-       checkout main                                                              
-       commit                                                                     
-       commit      
- ```
- 
- ## #6
  ```mermaid
  erDiagram                                                                         
     CUSTOMER ||--o{ ORDER : places                                                
