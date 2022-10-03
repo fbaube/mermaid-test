@@ -71,5 +71,19 @@ Class08 <--> C2: Cool label
     CUSTOMER ||--o{ ORDER : places                                                
     ORDER ||--|{ LINE-ITEM : contains                                             
     CUSTOMER }|..|{ DELIVERY-ADDRESS : uses 
- ````
+ ```
 
+## #6
+```mermaid
+stateDiagram-v2
+ [*] --> New
+ New --> Ready: admitted
+ Ready --> Running: scheduler dispatch
+ Running --> Ready: interrupt
+ Running --> Waiting: I/O or event wait
+ Waiting --> Ready: I/O or event completion
+ Running --> Terminated: exit
+ Terminated --> [*]
+ ```
+ 
+ 
