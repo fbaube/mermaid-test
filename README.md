@@ -14,8 +14,8 @@ __ulines=bold__
 graph TD;                                                                         
     A-->B;                                                                        
     A-->C;                                                                        
-    B-->D;                                                                        
-    C-->D; 
+    B-->EndOfFlowchart;                                                                        
+    C-->EndOfFlowchart; 
 ````
 
 ## #2
@@ -65,6 +65,32 @@ Class01 : int gorilla
 Class08 <--> C2: Cool label
 ````
 
+## #4A
+```mermaid
+classDiagram  
+classDiagram
+    Animal <|-- Duck
+    Animal <|-- Fish
+    Animal <|-- Zebra
+    Animal : +int age
+    Animal : +String gender
+    Animal: +isMammal()
+    Animal: +mate()
+    class Duck{
+      +String beakColor
+      +swim()
+      +quack()
+    }
+    class Fish{
+      -int sizeInFeet
+      -canEat()
+    }
+    class Zebra{
+      +bool is_wild
+      +run()
+    }
+```
+ 
 ## #5
  ```mermaid
  erDiagram                                                                         
@@ -73,6 +99,19 @@ Class08 <--> C2: Cool label
     CUSTOMER }|..|{ DELIVERY-ADDRESS : uses 
  ```
 
+## #5A
+```mermaid
+erDiagram
+          CUSTOMER }|..|{ DELIVERY-ADDRESS : has
+          CUSTOMER ||--o{ ORDER : places
+          CUSTOMER ||--o{ INVOICE : "liable for"
+          DELIVERY-ADDRESS ||--o{ ORDER : receives
+          INVOICE ||--|{ ORDER : covers
+          ORDER ||--|{ ORDER-ITEM : includes
+          PRODUCT-CATEGORY ||--|{ PRODUCT : contains
+          PRODUCT ||--o{ ORDER-ITEM : "ordered in"
+```
+          
 ## #6
 ```mermaid
 stateDiagram-v2
@@ -86,4 +125,24 @@ stateDiagram-v2
  Terminated --> [*]
  ```
  
- 
+ ## #7
+ ```mermaid
+ gitGraph:
+options
+{
+    "nodeSpacing": 150,
+    "nodeRadius": 10
+}
+end
+commit
+branch newbranch
+checkout newbranch
+commit
+commit
+checkout master
+commit
+commit
+merge newbranch
+```
+
+
